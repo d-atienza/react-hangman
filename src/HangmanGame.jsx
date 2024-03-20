@@ -1,16 +1,12 @@
-
 export default function HangmanGame() {
-    const expectedOutput = [null, 'e', 'l', null, null, 'e'];
+  const inputArray = [null, "E", "L", null, null, "E"];
+  //how can you make that from 'feline' and guessLetters from ['e', 'l', 'b']?
 
-    return (
-        <div className="letters">
-            <div className="letter">_</div>
-            <div className="letter">e</div>
-            <div className="letter">l</div>
-            <div className="letter">_</div>
-            <div className="letter">_</div>
-            <div className="letter">e</div>
-        </div>
-    )
-
+  return (
+    <div className="letters">
+      {inputArray.map((element, index) => (
+        <div className="letter" key={index}>{element === null ? '_' : element}</div>
+      ))}
+    </div>
+  );
 }

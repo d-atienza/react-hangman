@@ -1,8 +1,11 @@
+import { Fragment } from 'react'
 import HangmanGame from './HangmanGame'
 
 function App() {
 return (
-  <HangmanGame />
+  <Fragment>
+    <HangmanGame />
+  </Fragment>
 )
 }
 
